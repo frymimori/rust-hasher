@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="/logo.png" rel="icon">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;500" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500;700" rel="stylesheet">
+<meta charset="utf-8">
+<meta content="width=380" name="viewport">
+<style type="text/css">
+	.align-left { float: left; }
+	.align-right { float: right; }
+	html,
+	body {
+		background: #050505;
+		color: #a2a2a2;
+		font-family: "Inter";
+		font-size: 13px;
+		font-weight: 300;
+		line-height: 24px;
+		margin: 0;
+		width: 100%;
+	}
+	h1,
+	h2 {
+		color: #ffffff;
+		font-weight: 200;
+	}
+		h1 {
+			font-size: 27px;
+			line-height: 48px;
+			margin: -2px 0 3px;
+		}
+		h2 {
+			font-size: 21px;
+			line-height: 32px;
+			margin-bottom: 22px;
+			margin-top: -10px;
+		}
+	a {
+		color: #ffffff;
+		font-weight: 700;
+		text-decoration: none;
+	}
+		a .dark,
+		a .light,
+		a .neutral {
+			font-weight: 300;
+		}
+	footer,
+	header {
+		clear: both;
+		width: 100%;
+	}
+	footer {
+		margin-top: 5px;
+	}
+		footer .button {
+			margin-bottom: 100px;
+		}
+		footer .logo {
+			margin-bottom: 57px;
+			margin-top: -10px;
+		}
+	header section {
+		padding: 100px 0 84px;
+	}
+	main {
+		float: left;
+		width: 100%;
+	}
+		main section {
+			border-bottom: 2px dotted #232323;
+			margin-bottom: 105px;
+			padding-bottom: 90px;
+		}
+			main section.stage {
+				margin-top: 10px;
+				padding-bottom: 90px;
+			}
+				main section.stage .container-visual {
+					cursor: default;
+				}
+	section {
+		float: left;
+		width: 100%;
+	}
+		section .container {
+			margin: 0 auto;
+			width: 795px;
+		}
+	p {
+		margin-bottom: 15px;
+		margin-top: 0;
+	}
+	ul {
+		line-height: 22px;
+		list-style: none;
+		padding: 0 0 0 25px;
+	}
+		ul li {
+			margin-bottom: 10px;
+		}
+	p .code,
+	ul li .code {
+		background: #111;
+		display: inline;
+		margin: 0;
+		opacity: 1;
+		padding: 2px 6px 3px 5px;
+		white-space: pre-line;
+		width: auto;
+	}
+	.button {
+		background: none;
+		border: 2px solid #fff;
+		border-radius: 5px;
+		box-sizing: border-box;
+		display: inline-block;
+		margin: 0 15px 15px 0;
+		padding: 13px 31px 14px 31px;
+		text-align: center;
+	}
+		.button.primary-button {
+			background: #fff;
+			color: #050505;
+			margin-right: 30px;
+		}
+	.button-container {
+		background: #111;
+		border-color: #191919;
+		padding: 25px 30px 24px;
+		text-align: left;
+	}
+		.button-container:hover {
+			background: #131313;
+		}
+		.button-container span {
+			display: inline-block;
+			width: 100%;
+		}
+		.button-container .description {
+			color: #636363;
+			font-weight: 300;
+			margin-top: 10px;
+		}
+		.button-container .heading {
+			color: #ffffff;
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 30px;
+			margin-bottom: -3px !important;
+		}
+	.code-container {
+		background: #111;
+		border-radius: 5px;
+		box-sizing: border-box;
+		display: inline-block;
+		margin: 9px 0 24px;
+		padding: 6px;
+		width: 100%;
+	}
+	.code {
+		background: #111;
+		border-radius: 5px;
+		box-sizing: border-box;
+		display: block;
+		font-family: "DM Mono";
+		font-size: 12px;
+		font-weight: 300;
+		line-height: 22px;
+		overflow-x: scroll;
+		padding: 14px 14px 13px 14px;
+		white-space: pre;
+		width: 100%;
+	}
+	.comment {
+		color: #444;
+	}
+	.container-description {
+		margin-right: 51px;
+		width: 340px;
+	}
+		.container-description h1 {
+			margin: -6px 0 20px;
+		}
+		.container-description p {
+			margin-bottom: 55px;
+		}
+		.container-description .label {
+			border-bottom-color: #232323;
+			padding: 2px 0 20px 24px;
+		}
+	.container-visual {
+		width: 404px;
+	}
+	.container-visual.code-terminal {
+		background: #191919;
+		border-radius: 5px;
+		box-sizing: border-box;
+		margin-bottom: 15px;
+		padding: 7px 6px 6px;
+		position: relative;
+	}
+		.container-visual.code-terminal .code {
+			border: none;
+			padding: 25px;
+		}
+			.container-visual.code-terminal .code .heading {
+				display: inline-block;
+				margin: 10px 0;
+			}
+		.container-visual.code-terminal .code-terminal-navigation-bar {
+			border-radius: 5px;
+			display: block;
+			height: 24px;
+			margin-bottom: 7px;
+			width: 100%;
+		}
+		.container-visual.code-terminal .highlight {
+			border-left: 2px solid #a2a2a2;
+			background: #1d1d1d;
+			display: inline-block;
+			padding: 0 8px;
+		}
+	.dark {
+		border-color: #232323;
+		color: #636363;
+	}
+	.highlight-container {
+		border: 2px dotted #232323;
+		border-left-color: #87ea84;
+		border-right-color: #87ea84;
+		border-radius: 5px;
+		box-sizing: border-box;
+		display: block;
+		margin-bottom: 15px;
+		padding: 15px;
+		text-align: center;
+		width: 100%;
+	}
+		.highlight-container.row {
+			border-right-color: #232323;
+			margin: 0 15px 15px 0;
+		}
+		.highlight-container h2 {
+			border: none;
+			font-size: 18px;
+			margin: 0;
+			padding: 0;
+		}
+		.highlight-container .light {
+			font-weight: 300;
+		}
+	.label {
+		border-bottom-width: 2px;
+		border-bottom-style: dotted;
+		box-sizing: border-box;
+		display: inline-block;
+		font-family: "DM Mono";
+		line-height: 22px;
+		margin-bottom: 19px;
+		padding: 0 0 19px 24px;
+		width: 100%;
+	}
+		.label:before {
+			color: #a2a2a2;
+			content: "\000BB";
+			display: inline-block;
+			float: left;
+			font-size: 24px;
+			font-weight: 300;
+			margin: -1px 10px 0 -27px;
+		}
+	.light {
+		color: #fff;
+	}
+	.logo {
+		display: block;
+	}
+		.logo img {
+			margin-right: 15px;
+			margin-top: -10px;
+		}
+	.neutral {
+		color: #a2a2a2;
+	}
+	.row-three {
+		width: 255px;
+	}
+		.row-three:nth-child(3n) {
+			margin-right: 0 !important;
+		}
+	.row-two {
+		width: 390px;
+	}
+		.row-two:nth-child(even) {
+			margin-right: 0 !important;
+		}
+	@media (max-width: 1080px) {
+		footer div.align-left,
+		footer div.align-right,
+		section .container,
+		.container-description,
+		.container-visual,
+		.row {
+			box-sizing: border-box;
+			max-width: 480px;
+			width: 100% !important;
+		}
+		footer section nav,
+		footer section .align-right {
+			margin: 0 0 20px;
+		}
+			footer section nav ul {
+				margin-bottom: 0;
+			}
+		header nav ul li {
+			margin: 0;
+		}
+		section .container {
+			padding: 0 25px;
+		}
+		.button {
+			margin-right: 0;
+			width: 100%;
+		}
+		.container-description {
+			margin: 0 0 40px 0;
+		}
+			.container-description .label {
+				margin-top: -10px;
+			}
+		.highlight-container.row,
+		.highlight-container.row .highlight-container {
+			border-right-color: #87ea84;
+		}
+	}
+</style>
+<title>Avolitty - Efficient Algorithms and Modules</title>
+<body class="align-left">
+	<header class="align-left">
+		<section>
+			<div class="container">
+				<div class="align-left">
+					<a class="logo" href="/"><img alt="Avolitty Logo" class="align-left" height="34" src="/logo.jpg" width="26"> Avolitty</a>
+				</div>
+				<div class="align-right">
+					<p style="margin-bottom: 0;">Each and Every Byte Counts</p>
+				</div>
+			</div>
+		</section>
+	</header>
+	<main>
+		<section class="stage">
+			<div class="container">
+				<div class="align-left container-description">
+					<h1>Peak Algorithm Efficiency for Artificial Intelligence</h1>
+					<p>Avolitty creates and maintains open-source module software with unique algorithms to enhance the performance of AI applications and frameworks.</p>
+					<a class="button primary-button" href="https://github.com/avolitty" target="_blank">Browse Modules</a>
+				</div>
+				<div class="align-left code-terminal container-visual">
+					<div class="code-terminal-navigation-bar"></div>
+					<div class="code"><span class="dark">/app/./original-process
+
+51m0.310s <span class="comment">Elapsed</span>       23874613 <span class="comment">CPU and GPU</span>
+1837487324B <span class="comment">Avg Mem</span>     2010038755B <span class="comment">Peak Mem</span>
+
+<span class="highlight neutral">/app/./upgraded-avolitty-process</span>
+
+<span class="dark"><span class="highlight neutral">34m4.981s</span> <span class="comment">Elapsed</span>     <span class="highlight neutral">9388710</span> <span class="comment">CPU and GPU</span>
+<span class="highlight neutral">1131819420B</span> <span class="comment">Avg Mem</span>   <span class="highlight neutral">1410037245B</span> <span class="comment">Peak Mem</span></span>
+</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="container">
+				<a class="align-left button button-container row row-three" href="https://github.com/avolitty/avolitty-associator" target="_blank">
+					<span class="c dark label">In development</span>
+					<span class="heading">C Associator</span>
+					<span class="description">Create secure multidimensional hash tables.</span>
+				</a>
+				<a class="align-left button button-container row row-three" href="https://github.com/avolitty/avolitty-hasher" target="_blank">
+					<span class="c dark label">v1.2.1</span>
+					<span class="heading">C Hasher</span>
+					<span class="description">Create secure and variable-length checksums.</span>
+				</a>
+				<a class="align-left button button-container row row-three" href="https://github.com/avolitty/avolitty-pathfinder" target="_blank">
+					<span class="c dark label">v1.1.5</span>
+					<span class="heading">C Pathfinder</span>
+					<span class="description">Create shortest path traversals in grid graphs.</span>
+				</a>
+				<a class="align-left button button-container row row-three" href="https://github.com/avolitty/avolitty-randomizer" target="_blank">
+					<span class="c dark label">v1.2.3</span>
+					<span class="heading">C Randomizer</span>
+					<span class="description">Create random integers from timestamps and standard I/O.</span>
+				</a>
+				<a class="align-left button button-container row row-three" href="https://github.com/avolitty/avolitty-reader" target="_blank">
+					<span class="c dark label">v1.2.9</span>
+					<span class="heading">C Reader</span>
+					<span class="description">Create byte arrays from file streams.</span>
+				</a>
+			</div>
+		</section>
+		<section>
+			<div class="container">
+				<h2>Upgrade Software and Downgrade Hardware</h2>
+				<p>Avolitty modules are implemented in AI code where every byte makes a difference.</p>
+				<p style="margin-bottom: 5px;">Replacing inefficient and overlooked modules increases performance and decreases resource consumption.</p>
+			</div>
+		</section>
+	</main>
+	<footer class="align-left">
+		<section>
+			<div class="container">
+				<div class="align-left">
+					<a class="logo" href="/"><img alt="Avolitty Logo" class="align-left" height="34" src="/logo.jpg" width="26"> Avolitty <span class="neutral"><span class="dark">&ndash;</span> Efficient Algorithms and Modules</span></a>
+					<div class="clear"></div>
+					<a class="button primary-button" href="https://github.com/avolitty" target="_blank">Browse Modules</a>
+				</div>
+			</div>
+		</section>
+	</footer>
+</body>
