@@ -133,57 +133,19 @@
 			line-height: 30px;
 			margin-bottom: -3px !important;
 		}
-	.dark {
-		border-color: #232323;
-		color: #636363;
-	}
-	.highlight-container {
-		border: 2px dotted #232323;
-		border-left-color: #87ea84;
-		border-right-color: #87ea84;
-		border-radius: 5px;
-		box-sizing: border-box;
-		display: block;
-		margin-bottom: 15px;
-		padding: 15px;
-		text-align: center;
-		width: 100%;
-	}
-		.highlight-container.row {
-			border-right-color: #232323;
-			margin: 0 15px 15px 0;
-		}
-		.highlight-container h2 {
-			border: none;
-			font-size: 18px;
-			margin: 0;
-			padding: 0;
-		}
-		.highlight-container .light {
-			font-weight: 300;
-		}
 	.label {
 		border-bottom-width: 2px;
 		border-bottom-style: dotted;
+		border-color: #232323;
 		box-sizing: border-box;
+		color: #636363;
 		display: inline-block;
 		font-family: "DM Mono";
+		font-weight: 300;
 		line-height: 22px;
 		margin-bottom: 19px;
-		padding: 0 0 19px 24px;
+		padding: 0 0 19px;
 		width: 100%;
-	}
-		.label:before {
-			color: #a2a2a2;
-			content: "\000BB";
-			display: inline-block;
-			float: left;
-			font-size: 24px;
-			font-weight: 300;
-			margin: -1px 10px 0 -27px;
-		}
-	.light {
-		color: #fff;
 	}
 	.logo {
 		display: block;
@@ -192,9 +154,6 @@
 			margin-right: 15px;
 			margin-top: -10px;
 		}
-	.neutral {
-		color: #a2a2a2;
-	}
 	.row-three {
 		width: 255px;
 	}
@@ -202,25 +161,11 @@
 			margin-right: 0 !important;
 		}
 	@media (max-width: 1080px) {
-		footer div.align-left,
-		footer div.align-right,
 		section .container,
-		.container-description,
-		.container-visual,
 		.row {
 			box-sizing: border-box;
 			max-width: 480px;
 			width: 100% !important;
-		}
-		footer section nav,
-		footer section .align-right {
-			margin: 0 0 20px;
-		}
-			footer section nav ul {
-				margin-bottom: 0;
-			}
-		header nav ul li {
-			margin: 0;
 		}
 		section .container {
 			padding: 0 25px;
@@ -229,20 +174,10 @@
 			margin-right: 0;
 			width: 100%;
 		}
-		.container-description {
-			margin: 0 0 40px 0;
-		}
-			.container-description .label {
-				margin-top: -10px;
-			}
-		.highlight-container.row,
-		.highlight-container.row .highlight-container {
-			border-right-color: #87ea84;
-		}
 	}
 </style>
 <title>Avolitty - Efficient Algorithms and Cloud Services for AI</title>
-<body class="align-left">
+<body>
 	<header>
 		<section>
 			<div class="container">
@@ -290,17 +225,17 @@
 				<p>Leverage fully-managed APIs and cloud platforms as a service to enhance the performance of AI datasets and pipelines.</p>
 			</div>
 			<div class="container">
-				<a class="align-left button button-container row row-three" href="javascript:void 0">
+				<a class="align-left button button-container row row-three" href="javascript:void(0);" style="cursor: default;">
 					<span class="dark label">In development</span>
 					<span class="heading">Connector API</span>
 					<span class="description">Create fast databases with simplified query structures.</span>
 				</a>
-				<a class="align-left button button-container row row-three" href="javascript:void 0">
+				<a class="align-left button button-container row row-three" href="javascript:void(0);" style="cursor: default;">
 					<span class="dark label">In development</span>
 					<span class="heading">Forwarder API</span>
 					<span class="description">Create monitoring and load-balancing proxies.</span>
 				</a>
-				<a class="align-left button button-container row row-three" href="javascript:void 0">
+				<a class="align-left button button-container row row-three" href="javascript:void(0);" style="cursor: default;">
 					<span class="dark label">In development</span>
 					<span class="heading">Pathfinder API</span>
 					<span class="description">Create shortest path traversals in grid graphs.</span>
